@@ -1,0 +1,54 @@
+'''
+Functions: piece of code which perform a certain task 
+Recursion: a function calling itself to complete a task. 
+
+You can define a function which can print single number. 
+you can call again and again to print all the number from 
+1 to n . 
+
+Recursion: 
+1. Base case: when to stop the recursion 
+2. recursive case: when to start the recursion 
+
+100 boxes: -> supermarket 
+you can make 100 copies of yourself and transfer the boxes 
+into the supermarket 
+
+Based on the position of recursive call. 
+Recursion is of two types: 
+1. Head Recursion: recursion is the first step to be executed 
+later you will execute the logic.
+- the execution will happen in reverse order 
+2. Tail Recursion: logic execution happen then 
+recursive call happens.
+
+
+pani puri: 
+100 puri's -> 100 different plates (1 puri per plate) 
+1,2,3,4,5
+you will eat : 5,4,3,2,1 (reverse order)
+
+1. move to next plate (recursive call)  
+2. eat (logic)
+
+logic is getting postponed until you reach the last plate. 
+when you reach last plate you are eating in a reverse order. 
+'''
+# print single number 
+# def display(num):
+#     print(num)
+
+# def display(curr_num,last_num): 
+#     if curr_num > last_num: 
+#         return # base condition 
+#     else:
+#         print(curr_num)
+#         display(curr_num+1,last_num) # recursive condition 
+def display(curr_num,last_num): 
+    if curr_num > last_num: 
+        return # base condition 
+    else:
+        display(curr_num+1,last_num) # recursive condition 
+        print(curr_num)
+        
+display(1,10)
