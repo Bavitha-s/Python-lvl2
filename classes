@@ -1,0 +1,25 @@
+class TodoApplication:
+    def __init__(self):
+        self.todos = []
+
+    def add(self):
+        todo = {
+            "id": len(self.todos) + 1,
+            "title": input("Enter title: "),
+            "status": input("Enter status: ")
+        }
+
+        self.todos.append(todo)
+
+    def display(self):
+        for todo in self.todos:
+            print(todo)
+
+
+t1 = TodoApplication()
+
+
+while True:
+    
+    t1.add()
+    t1.display()
