@@ -1,0 +1,84 @@
+'''
+1. classes & objects 
+class is called a blue print 
+-> properties - variables 
+-> behaviours - methods (functions)
+
+-> variable and the function that work on the variables
+this are all scattered 
+-> class provied you an option to pack / encapsulate
+varaible and the functions that work with those variable.
+# a class name always starts with capital letter 
+
+Calculator 
+properties : num1 and num2 
+methods: add/sub/multiplication/division 
+
+
+using class alone we cannot perform anything , class doesnt 
+even occupy space in memory. 
+
+blue print -> constructor -> real world entity (object) which we can use 
+
+constructor is special kind of function which is called 
+when ever your are creating an object 
+
+'''
+# self -> access to the object 
+class Calculator:
+    def __init__(self): # initialization 
+    # default constructor -> we use it to add default values to 
+    # our properties
+        self.num1 = 0  
+        self.num2 = 0 
+    def add(self):
+        return self.num1 + self.num2 
+    def sub(self): 
+        return self.num1 - self.num2 
+    def mul(self): 
+        return self.num1 * self.num2 
+    def div(self): 
+        if self.num2 == 0:
+            print("Division Not possible")
+        else: 
+            return self.num1 / self.num2
+            
+            # New methods
+    def modulo(self):
+        return self.num1 % self.num2
+
+    def power(self):
+        return self.num1 ** self.num2
+
+    def floor_division(self):
+        return self.num1 // self.num2
+
+    def greater_than(self):
+        return self.num1 > self.num2
+
+    def less_than(self):
+        return self.num1 < self.num2
+
+    def equal_to(self):
+        return self.num1 == self.num2
+
+
+c1 = Calculator()
+
+c1.num1 = 10
+c1.num2 = 20
+
+print(f"Add: {c1.add()}")
+print(f"Sub: {c1.sub()}")
+print(f"Multiplication: {c1.mul()}")
+print(f"Division: {c1.div()}")
+print(f"Modulo Division: {c1.modulo()}")
+print(f"Power: {c1.power()}")
+print(f"Floor Division: {c1.floor_division()}")
+print(f"Greater Than: {c1.greater_than()}")
+print(f"Less Than: {c1.less_than()}")
+print(f"Equal To: {c1.equal_to()}")
+
+
+    
+
