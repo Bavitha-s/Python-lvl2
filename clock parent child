@@ -1,0 +1,52 @@
+'''
+Clock: 
+methods functions: 
+display_time() 
+
+AnalogClock: inherit Clock
+methods functions: 
+display_date() 
+
+SmartClock: inherit Clock 
+methods functions: 
+display_notifications() 
+connect_mobile()
+make_call() 
+count_steps() 
+'''
+class Clock:
+    def display_time(self):
+        print("Displaying time")
+
+
+class AnalogClock(Clock):  # inherits Clock
+    def display_date(self):
+        print("Displaying date")
+
+
+class SmartClock(Clock):  # inherits Clock
+    def display_notifications(self):
+        print("Displaying notifications")
+
+    def connect_mobile(self):
+        print("Connecting to mobile")
+
+    def make_call(self):
+        print("Making a call")
+
+    def count_steps(self):
+        print("Counting steps")
+
+
+# Testing
+analog = AnalogClock()
+analog.display_time()
+analog.display_date()
+
+smart = SmartClock()
+smart.display_time()
+smart.display_notifications()
+smart.connect_mobile()
+smart.make_call()
+smart.count_steps()
+
