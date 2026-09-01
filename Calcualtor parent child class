@@ -1,0 +1,37 @@
+class Calculator:   # one set class
+    def __init__(self):
+        self.num1 = 0
+        self.num2 = 0
+
+    def add(self):
+        return self.num1 + self.num2
+
+    def sub(self):
+        return self.num1 - self.num2
+
+    def division(self):
+        return self.num1 / self.num2
+
+    def multiplication(self):
+        return self.num1 * self.num2
+
+
+class CalculatorV2(Calculator):  # inherits from Calculator
+    def power(self):
+        return self.num1 ** self.num2
+
+    def modulo_division(self):
+        return self.num1 % self.num2
+        
+        
+calc = CalculatorV2()
+
+calc.num1 = 10
+calc.num2 = 3
+
+print(calc.add())              # 13
+print(calc.sub())              # 7
+print(calc.division())         # 3.333...
+print(calc.multiplication())   # 30
+print(calc.power())            # 1000
+print(calc.modulo_division())  # 1
