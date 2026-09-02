@@ -1,0 +1,30 @@
+'''
+Poly Morphism ( many forms): 
+- function / method behaviour inside the class 
+there are two types of poly morphism we can observe in python
+1. Run Time Poly morphism -> function/method is decided during run time 
+- this is observed in inheritence 
+- parent and child will have function with same name 
+- but the child will redefine the implementation
+2. Compile Time Poly morphism (rarely in python) -> decided during compiling 
+- same class 
+
+how python finds object properties or methods: 
+1. first it search locally i.e, within the class 
+if found it will return the  value or execute the function 
+if not found it will move up in the inheritence chain 
+2. if the parent and child don't have the property / method 
+you will get error 
+'''
+# Run time Polymorphism / method overriding 
+class Parent: 
+    def display(self): 
+        print("I'm in Parent")
+class Child(Parent): 
+    def display(self): 
+        print("I'm in Child")
+c = Child()
+c.display()
+# c.print() error as print is not their
+p = Parent()
+p.display()
