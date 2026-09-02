@@ -1,0 +1,20 @@
+class PizzaShop:
+    def __init__(self, brand_name):
+        self.brand_name = brand_name
+        self.pizzas = []
+
+    def serve_pizza(self):
+        print("Serving pizza")
+
+
+class Dominos(PizzaShop):
+    def serve_pizza(self):
+        print("Serving pizza in Dominos style")
+
+
+# Example
+shop = PizzaShop("Pizza Hut")
+shop.serve_pizza()
+
+dominos = Dominos("Dominos")
+dominos.serve_pizza()
