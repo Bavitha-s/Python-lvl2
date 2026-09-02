@@ -1,0 +1,42 @@
+"""
+a + b 
+a = 10 
+b = 20 
+a + b = 30 
+
+a = "trida"
+b = "pro"
+a+b = "tridapro" 
++ is overrided to concatinate the string 
+by default every class inherit a base class called 
+object 
+- __str__ -> it is called whenever you are trying 
+to print the object 
+"""
+class Number: 
+    def __init__(self,value): 
+        self.value = value 
+    def __str__(self): # always return a string 
+        return str(self.value)
+    
+    def __add__(self,other):
+        result = self.value + other.value 
+        return Number(result)
+    def __sub__(self,other): 
+        result = self.value - other.value 
+        return Number(result)
+    def __mul__(self,other): 
+        result = self.value * other.value
+        return Number(result)
+    def __truediv__(self,other): 
+        result = self.value / other.value 
+        return Number(result)
+        
+num1 = Number(10)
+num2 = Number(20)
+print(num1 + num2)
+print(num1 - num2)
+print(num1 * num2)
+print(num1 / num2)
+# print(num1,num2)
+# print(type(num1 + num2))
